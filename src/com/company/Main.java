@@ -11,9 +11,12 @@ import com.company.repositories.interfaces.IQuestionRepository;
 import com.company.repositories.interfaces.ITeamRepository;
 
 /**
- * @author Kuanyshbek
+ * @author Kuanyshbek Mustafin
  */
 
+/**
+ *
+ */
 public class Main {
 
     public static void main(String[] args) {
