@@ -18,7 +18,9 @@ public class Admin {
         controller = new QuestionController(questionRepository);
         scanner = new Scanner(System.in);
     }
-
+    /**
+     This code checks the administrator password for correctness
+     */
     public boolean checkPassword(String password) {
         String code = controller.getQuestion(7).getType();
         if (password.equals(code)) {
@@ -57,7 +59,9 @@ public class Admin {
             }
         }
     }
-
+    /**
+     This code add to the database new questions
+     */
     public void createQuestionMenu() {
         System.out.print("Enter the question: ");
         String skipInput = scanner.nextLine();
@@ -76,14 +80,18 @@ public class Admin {
         String response = controller.createQuestion(question, answer, type);
         System.out.println(response);
     }
-
+    /**
+     This code allows you to display questions by id
+     */
     public void getQuestionByIdMenu() {
         System.out.println("Enter the id:");
         int id = scanner.nextInt();
         Question question = controller.getQuestion(id);
         System.out.println((question == null ? "Question was not found!" : question.toString()));
     }
-
+    /**
+     This code allows to output all questions
+     */
     public void getAllQuestionsMenu() {
         String response = controller.getAllQuestions();
         System.out.println(response);

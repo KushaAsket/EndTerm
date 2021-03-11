@@ -14,9 +14,6 @@ import com.company.repositories.interfaces.ITeamRepository;
  * @author Kuanyshbek Mustafin
  */
 
-/**
- *
- */
 public class Main {
 
     public static void main(String[] args) {

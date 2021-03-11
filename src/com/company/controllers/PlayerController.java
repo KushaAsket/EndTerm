@@ -17,7 +17,9 @@ public class PlayerController {
     public PlayerController(IPlayerRepository playerRepository) {
         this.playerRepository = playerRepository;
     }
-
+    /**
+     This code register a new players
+     */
     public String registerPlayer(String name) {
         if (!name.isEmpty()) {
             Player player = new Player(name, 0);
@@ -29,25 +31,41 @@ public class PlayerController {
 
         return ("Do not send empty string");
     }
-
+  /**
+ bunch of getters and setters
+ */
+    /**
+     *
+     * @return player
+     */
     public Player getPlayer(int id) {
         Player player = playerRepository.getPlayer(id);
 
         return player;
     }
+    /**
+     *
+     * This method add point with id and score
+     */
 
     public String addPoint(int id, int score) {
         boolean isAdded = playerRepository.addPoint(id, score);
 
         return (isAdded ? "Point was not added" : "Point was added");
     }
-
+    /**
+     *
+     * @return id of player
+     */
     public int getId() {
         int id = playerRepository.getId();
 
         return id;
     }
-
+    /**
+     *
+     * This method get the score of players and output it
+     */
     public void getScoreboard() {
         List<Player> players = playerRepository.getScoreboard();
 

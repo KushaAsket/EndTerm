@@ -34,7 +34,9 @@ public class Quiz {
         playerController = new PlayerController(playerRepository);
         teamController = new TeamController(teamRepository);
     }
-
+    /**
+     This code check player's answers, will add points
+     */
     public void quizStart(int id) {
         int i = 1;
         while (true) {

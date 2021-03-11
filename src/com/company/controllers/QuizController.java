@@ -15,7 +15,9 @@ public class QuizController {
     public QuizController(IQuestionRepository questionRepository) {
         this.questionRepository = questionRepository;
     }
-
+    /**
+     This code check the answers and the functions help to the check answers.
+     */
     public boolean checkAnswer(String answer, int id) {
         String right_answer = questionRepository.getQuestion(id).getAnswer();
 

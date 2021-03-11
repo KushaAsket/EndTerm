@@ -14,7 +14,9 @@ public class TeamController {
     public TeamController(ITeamRepository teamRepository) {
         this.teamRepository =  teamRepository;
     }
-
+    /**
+        This method register teams to the quiz game
+     */
     public void registerTeam(String team_name) {
         if (!team_name.isEmpty()) {
             Team team = new Team(team_name, 0);
@@ -24,24 +26,37 @@ public class TeamController {
             System.out.println("Successfully registered!" + "\n" + teamRepository.getId() + ". " +team.getName());
         }
     }
-
+    /**
+     *
+     * @return team
+     */
     public Team getTeam(int id) {
         Team team = teamRepository.getTeam(id);
 
         return team;
     }
-
+    /**
+     *
+     * This method add point with id and score
+     */
     public String addPoint(int id, int score) {
         boolean isAdded = teamRepository.addPoint(id, score);
 
         return (isAdded ? "Point was not added" : "Point was added");
     }
-
+    /**
+     *
+     * @return ID
+     */
     public int getId() {
         int id = teamRepository.getId();
 
         return id;
     }
+    /**
+     *
+     * This method get the score of players and output it
+     */
 
     public void getScoreboard() {
         List<Team> teams = teamRepository.getScoreboard();

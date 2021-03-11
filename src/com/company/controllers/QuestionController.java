@@ -15,7 +15,9 @@ public class QuestionController {
     public QuestionController(IQuestionRepository questionRepository) {
         this.questionRepository = questionRepository;
     }
-
+    /**
+     This method create a questions
+     */
     public String createQuestion(String question, String answer, String type) {
         Question question1 = new Question(question, answer, type);
 
@@ -23,7 +25,10 @@ public class QuestionController {
 
         return (created ? "Question creation was failed!" : "Question was created!");
     }
-
+    /**
+     *
+     * @return question
+     */
     public Question getQuestion(int id) {
         Question question = questionRepository.getQuestion(id);
 
