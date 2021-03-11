@@ -30,6 +30,8 @@ public class FrontEnd {
         teamController = new TeamController(teamRepository);
     }
 
+    // start
+
     public void start() {
         while (true) {
             System.out.println();
@@ -52,7 +54,7 @@ public class FrontEnd {
                     teamMenu();
                 } else if (option == 4) {
                     teamScoreboard();
-                }   else if (option == 2565) {
+                } else if (option == 2565) {
                     adminMenu();
                 } else if (option == 0) {
                     break;
@@ -111,7 +113,7 @@ public class FrontEnd {
         for (int i = 0; i < 4; i++) {
             System.out.println();
             System.out.print("Team number " + num + ", with ");
-            for (int j=i; j < names.length; j += 4) {
+            for (int j = i; j < names.length; j += 4) {
                 if (names[j] == null) {
                     break;
                 }
